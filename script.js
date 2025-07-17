@@ -1,17 +1,17 @@
-document.addEventListener('DOMContentLoaded', function () {
-    document.addEventListener('contextmenu', (event) => event.preventDefault());
-    document.onkeydown = function (e) {
-        if (
-            e.key === 'F12' ||
-            (e.ctrlKey &&
-                e.shiftKey &&
-                (e.key === 'I' || e.key === 'C' || e.key === 'J')) ||
-            (e.ctrlKey && e.key === 'U')
-        ) {
-            return false;
-        }
-    };
+document.addEventListener('contextmenu', (event) => event.preventDefault());
+document.onkeydown = function (e) {
+    if (
+        e.key === 'F12' ||
+        (e.ctrlKey &&
+            e.shiftKey &&
+            (e.key === 'I' || e.key === 'C' || e.key === 'J')) ||
+        (e.ctrlKey && e.key === 'U')
+    ) {
+        return false;
+    }
+};
 
+document.addEventListener('DOMContentLoaded', function () {
     // Elements
     const canvas = document.getElementById('meme-canvas');
     const ctx = canvas.getContext('2d');
