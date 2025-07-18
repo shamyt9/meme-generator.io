@@ -11,6 +11,20 @@ document.onkeydown = function (e) {
     }
 };
 
+document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+        e.preventDefault();
+        alert('Viewing source code is disabled!');
+    }
+    if (
+        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
+        e.key === 'F12'
+    ) {
+        e.preventDefault();
+        alert('Developer tools are disabled!');
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     // Elements
     const canvas = document.getElementById('meme-canvas');
